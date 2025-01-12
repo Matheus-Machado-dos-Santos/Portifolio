@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte de Chat</title>
+</head>
+<style>
+    /* Reset básico de estilo */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .chat-container {
+        width: 350px;
+        height: 500px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .chat-header {
+        background-color: #007BFF;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .chat-messages {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        background-color: #f9f9f9;
+    }
+
+    .message {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .message.support {
+        justify-content: flex-start;
+    }
+
+    .message.user {
+        justify-content: flex-end;
+    }
+
+    .message .bubble {
+        max-width: 70%;
+        padding: 10px;
+        border-radius: 15px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .message.support .bubble {
+        background-color: #e1e1e1;
+    }
+
+    .message.user .bubble {
+        background-color: #007BFF;
+        color: white;
+    }
+
+    .chat-footer {
+        display: flex;
+        border-top: 1px solid #ddd;
+        padding: 10px;
+        background-color: #fff;
+    }
+
+    .chat-footer input[type="text"] {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .chat-footer button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .chat-footer button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<body>
+
+    <!-- Container principal do chat -->
+    <div class="chat-container">
+        <!-- Cabeçalho do chat -->
+        <div class="chat-header">
+            <h2>Suporte de Chat</h2>
+        </div>
+
+        <!-- Área de mensagens -->
+        <div class="chat-messages">
+            <div class="message support">
+                <p>Olá! Como posso ajudar você hoje?</p>
+            </div>
+            <div class="message user">
+                <p>Estou com um problema na minha conta, não consigo acessar.</p>
+            </div>
+            <div class="message support">
+                <p>Entendi. Vamos verificar isso. Você pode me informar seu e-mail?</p>
+            </div>
+        </div>
+
+        <!-- Área para digitar a mensagem -->
+        <div class="chat-footer">
+            <input type="text" placeholder="Digite sua mensagem..." />
+            <button>Enviar</button>
+        </div>
+    </div>
+
+</body>
+</html>
